@@ -14,6 +14,9 @@ This project is an exploratory data analysis project for the class DSC 80 at UCS
 ### NMAR Analysis
 In our dataset, the column 'description' has missing values. We believe this column is NMAR (Not Missing At Random) because 
 ### Missingness Dependency
+<iframe src="assets/hist_ingred.html" width=800 height=600 frameBorder=0></iframe>
+
+
 ---
 ## Hypothesis Testing
 
