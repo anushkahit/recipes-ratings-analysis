@@ -1,4 +1,4 @@
-# Recipes and Ratings and Analysis: Do recipes with chocolate have a higher rating?
+# Recipes and Ratings Analysis: Do recipes with chocolate have a higher rating?
 This project is an exploratory data analysis project for the class DSC 80 at UCSD by Anushka Purohit and Neil Damle.
 
 ## Introduction
@@ -9,7 +9,7 @@ After looking at the dataset, the question we decided to dive deeper into was: *
 
 We thought this was a relevant question because it would allow us to explore the psychology of recipe rating, and potentially identify if people’s sweet tooth affected how they judged a dish’s quality. The reason we chose chocolate in particular was because of its specificity, and also its presence in a variety of well known desserts and sweet dishes. 
 
-As we moved forward with this question, the most important columns in the dataset were the ratings column and the chocolate column (which we created). The *rating* column was the average rating of a recipe from the interactions dataset, and it allowed us to quantify the perceived quality of a dish. The *chocolate* column was one created from the *ingredients* column, by searching for ingredient lists that included the word ‘chocolate’. The chocolate column then served as a boolean way to identify recipes containing chocolate. There were some issues with this method, such as a failure to account for typos or mislabeled names, but it served as an overall accurate representation.
+As we moved forward with this question, the most important columns in the dataset were the ratings column and the chocolate column (which we created). The *rating* column was the average rating of a recipe from the interactions dataset, and it allowed us to quantify the perceived quality of a dish. The *chocolate* column was one created from the *ingredients* column, by searching for ingredient lists that included the word ‘chocolate’. The chocolate column then served as a boolean way to identify recipes containing chocolate. There were some issues with this method, such as a failure to account for typos or mislabeled ingredient names, but it served as an overall accurate representation.
 
 ---
 ## Cleaning and EDA (Exploratory Data Analysis)
@@ -38,6 +38,7 @@ Below, you can see a plot for average rating by number of ingredients in a recip
 
 ### Interesting Aggregates
 The interesting aggregate that we chose to look at was created by grouping by the chocolate column, and taking the mean of the resulting groups. As seen below, some interesting takeaways include the fact that recipes with chocolate tend to take slightly less time and fewer ingredients, but with more steps. Most related to our main question, however, is the fact that recipes with chocolate tend to have a higher, albeit very slightly higher, average rating.
+
 |     id |   minutes |   contributor_id |   n_steps |   n_ingredients |   rating |
 |-------:|----------:|-----------------:|----------:|----------------:|---------:|
 | 381916 |  116.673  |      1.47963e+07 |   10.0049 |         9.24079 |  4.62467 |
