@@ -38,12 +38,15 @@ Below, you can see a plot for average rating by number of ingredients in a recip
 
 ### Interesting Aggregates
 The interesting aggregate that we chose to look at was created by grouping by the chocolate column, and taking the mean of the resulting groups. As seen below, some interesting takeaways include the fact that recipes with chocolate tend to take slightly less time and fewer ingredients, but with more steps. Most related to our main question, however, is the fact that recipes with chocolate tend to have a higher, albeit very slightly higher, average rating.
-
+|     id |   minutes |   contributor_id |   n_steps |   n_ingredients |   rating |
+|-------:|----------:|-----------------:|----------:|----------------:|---------:|
+| 381916 |  116.673  |      1.47963e+07 |   10.0049 |         9.24079 |  4.62467 |
+| 373584 |   88.5087 |      1.89899e+07 |   11.7294 |         8.78158 |  4.63664 |
 
 ---
 ## Assessment of Missingness
 ### NMAR Analysis
-In our dataset, the column 'description' has missing values. We believe this column is NMAR (Not Missing At Random) because 
+In our dataset, the column 'description' has missing values. We believe this column is NMAR (Not Missing At Random) because it appears that missingness depends on the missing value itself. For example, it could be that the author of the recipe decided not to provide a description for the recipe since the title may be enough of a description.
 ### Missingness Dependency
 To analyze missingness, we chose the 'rating' column which is a quantitative column with missing values. 
 We wanted to analyze its dependency of missingness of 'rating' with other columns. 
