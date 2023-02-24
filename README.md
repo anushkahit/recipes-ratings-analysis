@@ -27,26 +27,38 @@ We wanted to analyze its dependency of missingness of 'rating' with other column
 
 First we analyzed 'rating' column's dependency of missingness on the column 'n_ingredients'.
 Here is a histogram distribution plot showing the distribution of 'n_ingredients' when 'rating' is missing and when 'rating' is not missing. There are also box plots on the top showing the spread of the two.
+
 <iframe src="assets/hist_ingred.html" width=800 height=600 frameBorder=0></iframe>
+
 You can notice that the distributions when rating is missing and rating is not missing are very similar and centered around the same location as well.
 Here is also a kernel density estimate plot of the two distributions. Here you can see that they are centered around the same location but the shape is different. When rating is not missing, the distribution has a more zig-zag pattern.
+
 <iframe src="assets/kde_n_ingred.html" width=800 height=600 frameBorder=0></iframe>
+
 Since the shapes are slightly different but centered around the same location, we chose to use the Kolmogorov-Smirnov test statistic when conducting the permutation test. 
 After conducting our permutation test, we got a p-value of 0.11, which is greater than the significance value of 0.05 so we fail to reject the null hypothesis and conclude that the missingness of 'rating' does not depend on 'n_ingredients'. 
 
+
 Next, we analyzed 'rating' column's dependency of missingness on the column 'n_steps'.
 Here is a histogram distribution plot showing the distribution of 'n_steps' when 'rating' is missing and when 'rating' is not missing. There are also box plots on the top showing the spread of the two.
+
 <iframe src="assets/hist_n_steps.html" width=800 height=600 frameBorder=0></iframe>
+
 You can notice that the distribution shapes are very similar but are slightly shifted. 
 Here is also a kernel density estimate plot of the two distributions. 
+
 <iframe src="assets/kde_n_steps.html" width=800 height=600 frameBorder=0></iframe>
+
 Since the shapes are pretty similar but just shifted, we decided to use the absolute difference of means test statistic when conducting the permutation test. 
 After conducting the permutation test, we got a p-value of 0.0.
 We also did a permutation with the Kolmogorov-Smirnov test statistic since the location of the centers were very similar. For this, we got a p-value of 3.813369074131651e-13, which is extremely small and rounds to 0. 
 Since the p-value is less than the significance level of 0.05, we reject the null hypothesis and conclude that the missingness of 'rating' does depend on the column 'n_steps'. 
 Here is an empirical distribution of the absolute difference of means for this permutation test:
+
 <iframe src="assets/fig.html" width=800 height=600 frameBorder=0></iframe>
+
 The red line is the observed absolute difference of means, which you can see was pretty far from the rest of the simulated differences. 
+
 ---
 ## Hypothesis Testing
 
