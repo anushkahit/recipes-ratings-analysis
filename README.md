@@ -29,12 +29,12 @@ Once we had a merged dataset, we had to make sure that all the columns were the 
 ### Univariate Analysis
 Although we did single variable analysis on many columns, the one we’d like to highlight is this visualization we created for the chocolate column. It shows the number of recipes that do and do not contain chocolate. From this, we can see that while a majority of recipes do not contain chocolate, there is a large sample size (~5000 recipes) that do. This means that the data we analyze can be judged as fairly representative of recipes as a whole.
 
-<iframe src="assets/ua2.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/UA2.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Bivariate Analysis
 Below, you can see a plot for average rating by number of ingredients in a recipe, that is also accompanied by a boxplot for the number of ingredients. While this plot is only tangentially related to our overarching question, it serves to potentially highlight some trends regarding the perception/reception of complex recipes. Overall, most ingredient values had high average ratings, but it followed a downward trend until around 10 ingredients, at which point rating started to increase as ingredients increased. This could indicate that there was a threshold at which the number of ingredients signified rich complexity rather than unnecessary complication. Also, from the box plot, we can see that most recipes are between 5-15 ingredients.
 
-<iframe src="assets/ba2.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/BA2.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Interesting Aggregates
 The interesting aggregate that we chose to look at was created by grouping by the chocolate column, and taking the mean of the resulting groups. As seen below, some interesting takeaways include the fact that recipes with chocolate tend to take slightly less time and fewer ingredients, but with more steps. Most related to our main question, however, is the fact that recipes with chocolate tend to have a higher, albeit very slightly higher, average rating.
@@ -93,4 +93,4 @@ The test statistic we chose to use was the difference in group rating means betw
 
 After running the simulations, the resulting p-value was .116, which means that we would fail to reject the null hypothesis because there is a non-negligible change that the observed difference occurred by chance alone. This means that we cannot reject the null hypothesis, which also means we cannot claim that the presence of chocolate in a recipe would mean higher ratings. See below for a visualization of the results.
 
-
+<iframe src="assets/test.html" width=800 height=600 frameBorder=0></iframe>
