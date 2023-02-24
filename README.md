@@ -46,7 +46,7 @@ The interesting aggregate that we chose to look at was created by grouping by th
 ---
 ## Assessment of Missingness
 ### NMAR Analysis
-In our dataset, the column 'description' has missing values. We believe this column is NMAR (Not Missing At Random) because it appears that missingness depends on the missing value itself. For example, it could be that the author of the recipe decided not to provide a description for the recipe since the title may be enough of a description.
+In our dataset, the column 'description' has missing values. We believe this column is NMAR (Not Missing At Random) because it appears that missingness depends on the missing value itself. For example, it could be that the author of the recipe decided not to provide a description because the author may have been uploading their recipe on their phone and did not want to type out a long description. We could additionally obtain a "device type" column that would tell us what device the user uploaded their recipe on, which could possibly make 'description' Missing At Random (MAR).
 ### Missingness Dependency
 To analyze missingness, we chose the 'rating' column which is a quantitative column with missing values. 
 We wanted to analyze its dependency of missingness of 'rating' with other columns. 
