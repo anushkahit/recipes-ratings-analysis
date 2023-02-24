@@ -90,8 +90,8 @@ The red line is the observed absolute difference of means, which you can see was
 ## Hypothesis Testing
 We chose to do a permutation test on this data set, in which we repeatedly shuffled the chocolate column to generate simulated statistics. 
 
-Our Null Hypothesis was: The presence of chocolate in a recipe does not affect its rating. In other words, recipes without chocolate will have the same average rating as recipes with chocolate.
-Our Alternative Hypothesis was: The presence of chocolate in a recipe will increase its rating.
+Our Null Hypothesis was: **The presence of chocolate in a recipe does not affect its rating. In other words, recipes without chocolate will have the same average rating as recipes with chocolate.**
+Our Alternative Hypothesis was: **The presence of chocolate in a recipe will increase its rating.**
 
 The test statistic we chose to use was the difference in group rating means between recipes with and without chocolate. Our observed statistic was .01197. We chose to run the test at a .05 significance level and created 1000 simulated statistics.
 
